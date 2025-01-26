@@ -4,7 +4,7 @@ let currfolder;
 async function getSongs(folder) {
     currfolder = folder
     let encodedFolder = encodeURIComponent(currfolder)
-    let a = await fetch(`/songs/${encodedFolder}/`)
+    let a = await fetch(`./songs/${encodedFolder}/`)
     let response = await a.text()
     let div = document.createElement("div")
     div.innerHTML = response
